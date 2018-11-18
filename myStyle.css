@@ -1,24 +1,28 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 .menu {
 	width: 100%;
 	height: 70px;
 	display: flex;
 	justify-content: space-evenly;
-
 	background-color: #212121;
 	align-items: stretch;
 	flex-wrap: wrap;
+	align-items: center;
+	opacity: 0.5;
+	z-index: 3;
+	position: relative;
 }
 .menu-items {
 	text-decoration: none;
 	color: #ffffff;
 	font-family: georgia;
-	width: 100px;
-	background-color: royalblue;
 	text-align: center;
+	font-size: 20px;
+	font-style:italic;
 
 }
 .container {
@@ -30,20 +34,25 @@ html, body {
 	display: none;
 }
 .list {
-	position: absolute;
+	position: relative;
 	display: block;
-	width:inherit;
-	background-color: #212121;
+	margin-top: 5px;
+	background-color: red;
 	display: none;
+	height: 90vh;
+	width: 100vw;
+	position: absolute;
 }
+
 .items {
 	display: block;
 	text-decoration: none;
-	text-align: center;
 	font-family: arial;
 	font-size: 20px;
 	margin-bottom: 10px;
 	color: #ffffff;
+	margin-top: 50px;
+	text-align: center;
 }
 .menuList {
 	text-decoration: none;
@@ -72,21 +81,406 @@ html, body {
 	background-color: black;
 	border-radius: 5px;
 }
-@media only screen and (max-width: 600px) {
+.items:hover {
+	color: #a1887f;
+}
+.menu-items:hover {
+	color: #a1887f;
+}
+.wall {
+	background-image: url("http://i68.tinypic.com/9jk41y.jpg");
+	width: 400px;
+	height: 800px;
+	top:0;
+	position: absolute;
+	z-index:1;
+}
+.profile-photo {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-left: 90px;
+	margin-top: 100px;
+}
+img {
+	width: inherit;
+	height:inherit;
+	border-radius: inherit;
+}
+.parallax {
+	background-image: url("http://i63.tinypic.com/jl5kb9.jpg");
+	height: 800px;
+	width: 100%;
+	position: absolute;
+	top:0;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+.profile-intro {
+	width: inherit;
+	height:auto;
+	text-align: center;
+	color: #ffffff;
+}
+#profile-name {
+	font-family: tahoma;
+	font-style:italic;
+}
+.job-title {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#contact-email{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 50px;
+
+}
+#contact-mob {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.fa {
+    padding: 20px;
+    font-size: 60px;
+    width: 10;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+.contact-media {
+	margin-top: 50px;
+	width: inherit;
+	text-align: center;;
+}
+#fb:hover {
+	color: #3b5998;
+}
+#twit:hover {
+	color: #1dcaff;
+}
+#gm:hover {
+	color: #dd4b39;
+}
+#linked:hover {
+	color: #0077b5;
+}
+
+
+.download-btn {
+    width: 30px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    margin-top: 25px;
+    
+  }
+  .cic {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: royalblue;
+  }
+  .cic-1 {
+   
+    display: inline-block;
+    margin-left: -5px;
+    margin-top: 5px;
+  }
+  .cic-2 {
+    margin-left: 20px;
+    margin-top: 5px;
+    
+  }
+  .cic-3 {
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+  
+  
+  
+  .rog{
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background-color: #ffffff;
+    transform: rotate(-90deg);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .rop {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    transform: rotate(180deg);
+    margin-left: 7.5px;
+    margin-top: 16px;
+  }
+  
+  .ani {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 20px;
+    
+  }
+  .btnDown {
+    width: 200px;
+    height: 50px;
+    margin-top: 100px;
+    background-color:  DodgerBlue;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 3;
+    cursor: pointer;
+    margin-left: 80px;
+  }
+  .btnDown:hover {
+    background-color: royalblue;
+  }
+  .wordcv {
+      position: absolute;
+      margin-left: 60px;
+  }
+  .cv-button {
+      margin-left: 20px;
+  }
+  .intro-parallax {
+  	display: block;
+  	width: auto;
+  	height: auto;
+  	margin-left: 430px;
+  	position: relative;
+  	color: #ffffff;
+  	top: 500px;
+  }
+  #hello {
+  	font-family: 'Courier New', Courier, monospace;
+  	font-size: 35px;
+  }
+  #my-name {
+  	
+  	font-size: 50px;
+  	padding: 10px;
+
+  }
+  .job-name {
+  	font-family: 'Times New Roman', Times, serif;
+  	font-style: italic;
+  	font-size: 35px;
+  }
+  .summary-about {
+  	background-image: url("http://i67.tinypic.com/2ch9xzn.jpg");
+  	width: 100%;
+  	height: 700px;
+  	background-repeat: no-repeat;
+  	position: relative;
+  	margin-top:730px;
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .summary {
+  	position: absolute;
+  	width: 600px;
+  	height: inherit;
+  	margin-left: 100px;
+  	overflow-y: auto;
+  	word-wrap: break-word;
+
+  	
+  }
+  #summary-head {
+  	color: #ffffff;
+  	font-size: 60px;
+  	font-style: italic;
+  }
+  #summary-title {
+  	color: #ffffff;
+  	font-size: 35px;
+  	font-family: sans-serif;
+  }
+  #summary-content {
+  	color: peru;
+  	font-size: 30px;
+
+  }
+  .edu-exp {
+  	width: 100%;
+  	display: flex;
+  	position: absolute;
+  	background-color: gray;
+  	height: auto;
+  	flex-wrap: wrap;
+  	flex-direction: start;
+  	justify-content: space-around;
+  	margin-top: 0px;
+  }
+  #edu {
+  	width: 500px;
+  	height: auto;
+  	color: #212121;
+  }
+  #edu-head {
+  	color: #3b5998;
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  	font-style: italic;
+  	font-size: 30px;
+  }
+  #edu-content1 {
+  	font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  #edu-date2 {
+  	margin-top: 50px;
+  }
+  #edu-content2 {
+  	font-family: 
+  }
+  #exp {
+  	width: 500px;
+  	height: auto;
+  	color: #212121;
+  }
+  #exp-head {
+  	color: #3b5998;
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  	font-style: italic;
+  	font-size: 30px;
+  }
+  #job-title1 {
+  	font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #location-1 {
+  	font-family: sans-serif;
+  }
+  #content-1 {
+  	font-family:  Georgia, 'Times New Roman', Times, serif;
+  }
+  #job-date2 {
+  	margin-top: 50px;
+  }
+  #job-title2 {
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #location-2 {
+  	font-family: sans-serif;
+  }
+  #content-2 {
+  	font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  #job-date3 {
+  	margin-top: 50px;
+  }
+  #job-title3 {
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #location-3 {
+  	font-family: sans-serif;
+  }
+  #content-3 {
+  	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #tester {
+  	width: 100px;
+  	height: 40px;
+  	color: #ffffff;
+  	text-align: center;
+  	position: fixed;
+  	z-index: 5;
+  	margin-top: 0px;
+  	background-color: red;
+  }
+
+  	  
+
+@media only screen and (max-width: 640px) and (min-width: 360px)  {
 	.menu {
 		flex-direction: start;
 		justify-content: flex-start;
-
 	}
 	.container {
 		display: block;
 	}
 	.menu-items {
 		display: none;
-	}
-	.menuList {
-		width: 100%;
-		justify-content: center;
 
 	}
+	.wall {
+		width: 100vw;
+	}
+	
+	.summary {
+		width: 380px;
+		margin-left: 10px;		
+	}
+	
+	.summary-about {
+		width: 100vw;
+	}
+	
+	#summary-content {
+		font-size: 6vw;
+	}
+	.parallax {
+		display: none;
+	}
+	#exp {
+		text-align: center;
+	}
+	#edu {
+		text-align: center;
+	}
+	.list {
+		width: 100vw;
+	}
+	
+	
+}
+@media only screen and (max-width: 640px) and (min-width: 320px) {
+	.parallax {
+		display: none;
+	}
+	.wall {
+		width: 100vw;
+	}
+	.summary-about {
+		width: 100vw;
+	}
+	.menu {
+		flex-direction: start;
+		justify-content: flex-start;
+	}
+	.container {
+		display: block;
+	}
+	#summary-content {
+		font-size: 6vw;
+	}
+	#exp {
+		text-align: center;
+	}
+	#edu {
+		text-align: center;
+	}
+	.list {
+		width: 100vw;
+	}
+	.menu-items {
+		display: none;
+	}
+	.summary {
+		
+		margin-left: 5px;
+		width: 100vw;
+	}
+	
 }
