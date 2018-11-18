@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> divces </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Portofolio </title>
+<meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel = "stylesheet" type = "text/css" href="styling/myStyle.css" meda = "screen" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<div id = "tester"></div> <!-- height document tester-->
+	<nav> <!--nav bar and header-->
 <div class = "menu">
 	<div class = "container">
 		<div class = "box">
@@ -19,21 +22,94 @@
 	        <div class = "row row-6"></div>
         </div>
 		<div class = "list">
-			<a href = "#" class = "items">About</a>
-			<a href = "#" class = "items">Home</a>
-			<a href = "#" class = "items">Gallery</a>
-			<a href = "#" class = "items">Repository</a>
-			<a href = "#" class = "items">Profile</a>
-			<a href = "#" class = "items">Contact</a>
+			<a href = "#" class = "items item-nav-1">About</a>
+			<a href = "#" class = "items item-nav-2">Education&Experience</a>
+			<a href = "#" class = "items item-nav-3">Skills&Languages</a>
+			<a href = "#" class = "items item-nav-4">Awards&Intersets</a>
+			
 		</div>
 	</div>
 	<a href = "#" class = "menu-items item-1">About</a>
-	<a href = "#" class = "menu-items item-1">Home</a>
-	<a href = "#" class = "menu-items item-1">Gallery</a>
-	<a href = "#" class = "menu-items item-1">Repository</a>
-	<a href = "#" class = "menu-items item-1">Profile</a>
-	<a href = "#" class = "menu-items item-1">Contact</a>
+	<a href = "#" class = "menu-items item-2">Education&Experience</a>
+	<a href = "#" class = "menu-items item-3">Skills&Languages</a>
+	<a href = "#" class = "menu-items item-4">Awards&Intersets</a>
 </div>
+</nav> <!--end of nav bar-->
+<aside>
+	<div class = "wall"> <!-- aside profile wall-->
+		<div class = "profile-photo">
+			<img src = "http://i68.tinypic.com/2nl8rxl.jpg"/>
+		</div>
+		<div class = "profile-intro">
+			<h1 id ="profile-name">Mostafa Mohamed</h1>
+			<p class = "job-title">Senior Data Analyst & Web Developer</p>
+			<p class = "job-title">Poland, Warsaw</p>
+			<p id = "contact-email">mustafa.husseiny@gmail.com</p>
+			<p id = "contact-mob">Mob: +48 733 825 924
+		</div>
+		<div class = "contact-media">
+			<a href="https://www.facebook.com/mostafa.elhusseiny1" target = "_blank" rel="noopener noreferrer" class="fa fa-facebook" id = "fb"></a>
+            <a href="https://twitter.com/mostafahusseiny" target = "_blank" rel="noopener noreferrer" class="fa fa-twitter" id = "twit"></a>
+            <a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/" target = "_blank" rel="noopener noreferrer" class="fa fa-google" id = "gm"></a>
+            <a href="https://www.linkedin.com/in/mostafa-mohamed-33189270/" target = "_blank" rel="noopener noreferrer"class="fa fa-linkedin" id = "linked"></a>
+		</div>
+		<div class = "btnDown"> <!-- download button cv -->
+            <div class = "wordcv">Download CV</div>
+              <div class = "ani">
+                  <div class = "rog"></div>
+                  <div class = "rop"></div>
+                <div class = "download-btn">
+            <div class = "cic cic-1"></div>
+            <div class = "cic cic-2"></div>
+            <div class = "cic cic-3"></div>
+          </div>
+          </div>
+          </div> <!-- end button -->
+	</div> <!-- end aside wall-->
+
+	<section> <!-- section parallax background and intro-->
+		<div class = "parallax">
+			<div class = "intro-parallax">
+				<p id = "hello">HELLO I'M </p>
+				<span id = "my-name">MOSTAFA MOHAMED </span>
+				<h3 class = "job-name">Senior Data Analyst & Web Developer</h3>
+			</div>
+		</div>
+	</section> <!-- end parallax section-->
+	<article class = "summary-about"> <!-- article about-->
+		<div class = "summary">
+			<h1 id = "summary-head">About</h1>
+			<h3 id = "summary-title">My Background</h3>
+			<p id = "summary-content">Experienced Quality Analyst with a demonstrated history of working in the information technology and services industry. Skilled in Network Administration, Internet Protocol Suite (TCP/IP), Cascading Style Sheets (CSS), Technical Support, and HTML. Strong quality assurance professional with a Bachelor's degree focused in Administrative computer system from higher institute of computer science and management technology in Cairo, Dev JavaScript in Codepen and Stack OverFlow.</p>
+		</div>
+	</article>
+	<section class = "edu-exp"> <!-- education & Experience section-->
+		<div id = "edu"> <!-- education content -->
+			<h1 id = "edu-head">Education</h1>
+			<p id = "edu-date1">2005 - 2009</p>
+			<p id = "edu-content1"><b>Bachelor of Science , computer science and administration technology</b>.
+              University of Cairo － Cairo, Egypt Bachelor's degree in computer science and administration technology.</p>
+			<p id = "edu-date2">2009 - 2010</p>
+			<p id = "edu-content2"><b>Associate of Science , Securing IoT Data and Communications</b><br>
+              Associate of Science , Securing IoT Data and Communications.</p>
+		</div> <!-- end education content -->
+		<div id = "exp"> <!-- experience content -->
+			<h1 id = "exp-head">Experience</h1>
+			<p id = "job-date1">Jan 2015 to Current </p>
+			<p id = "job-title1"><b>Senior Data Analyst</b></p>
+			<p id = "location-1"><b>Accenture</b> - Warsaw, Poland</p>
+			<p id = "content-1">responsibility : Interpret data, analyze results using statistical techniques and provide ongoing reports.-Develop and implement databases, data collection systems, data analytics and other strategies that optimize statistical efficiency and quality.Identify, analyze, and interpret trends or patterns in complex data sets. -Work with management to prioritize business and information needs.</p>
+			<p id = "job-date2">Jan 2009 to Jan 2010</p>
+			<p id = "job-title2"><b>Database Designer</b></p>
+			<p id = "location-2"><b>RayaTelecome</b> - Cairo, Egypt</p>
+			<p id = "content-2">responsibility : organization and focus mainly on the programming aspect of database design, analyzing data inquiry needs, ensuring security of information and organizing layout to best present the information needed.</p>
+			<p id = "job-date3">Jan 2008 to Nov 2008</p>
+			<p id = "job-title3"><b>Data Collector</b></p>
+			<p id = "location-3"><b>EgyNet</b> - Cairo, Egypt</p>
+			<p id = "content-3">responsibility : Performing day-to-day data collection activities. Contacting randomly selected participants to discuss the survey and the participant's involvement. Responding to questions the participant may have about the survey.
+            </p>
+		</div>
+	</section>
 
 <script type = "text/javascript" src = "myScript/script.js"></script>
 </body>
