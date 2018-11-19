@@ -3,6 +3,10 @@ html, body {
 	padding: 0;
 	overflow-x: hidden;
 }
+.fixMenu {
+	display: fixed;
+}
+
 .menu {
 	width: 100%;
 	height: 70px;
@@ -34,14 +38,13 @@ html, body {
 	display: none;
 }
 .list {
-	position: relative;
-	display: block;
-	margin-top: 5px;
-	background-color: red;
+	transition: 0.5s ease-out;
+	margin-top: -57px;
+	background-color: #212121;
 	display: none;
-	height: 90vh;
+	height: 100vh;
 	width: 100vw;
-	position: absolute;
+	position: fixed;
 }
 
 .items {
@@ -293,7 +296,7 @@ img {
   	width: 600px;
   	height: inherit;
   	margin-left: 100px;
-  	overflow-y: auto;
+  	
   	word-wrap: break-word;
 
   	
@@ -316,8 +319,8 @@ img {
   .edu-exp {
   	width: 100%;
   	display: flex;
-  	position: absolute;
-  	background-color: gray;
+  	position: relative;
+  	background-color: #ffffff;
   	height: auto;
   	flex-wrap: wrap;
   	flex-direction: start;
@@ -398,9 +401,84 @@ img {
   	z-index: 5;
   	margin-top: 0px;
   	background-color: red;
+  	margin-left: 120px;
   }
+  .close-list {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 92vw;
+  margin-top: 2vh;
+}
+.mod {
+  width: 15px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+}
+.mod-1 {
+  transform: rotate(45deg);
+  margin-top: 8px;
+  margin-left: 3px;
+}
+.mod-2 {
+  transform: rotate(-45deg);
+  margin-top: 8px;
+  margin-left:3px;
+}
 
-  	  
+.shad {
+	display: none;
+}
+.skills-lang {
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: #212121;
+	position: relative;
+	margin-top: -30px;
+}
+#skills-head {
+	color: #3b5998;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-style: italic;
+	font-size: 30px;
+	margin-left: 50px;
+	position: relative;
+}
+.block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: flex-start;
+}
+.element {
+	color: #ffffff;
+	font-family: sans-serif;
+	width: 150px;
+	text-align: center;
+}
+.grap {
+	width: 300px;
+	background-color: #e0e0e0;
+	height: 2px;
+}
+.lin {
+	height: inherit;
+	background-color: #3b5998;
+	width: 0px;
+}
+.block-2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: flex-start;
+	margin-top: 50px;
+}
+
 
 @media only screen and (max-width: 640px) and (min-width: 360px)  {
 	.menu {
