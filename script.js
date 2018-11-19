@@ -1,5 +1,64 @@
 $(document).ready(function() {
 	$(".box").on("click", function() {
-		$(".list").toggle(300);
+		$(".list").toggle();
+		$(".profile-intro").addClass("shad");
+	});
+	$(".close-list").on("click", function() {
+		$(".list").css({display: "none"});
+		$(".profile-intro").removeClass("shad");
+	});
+	$(".items").on("click", function() {
+		$(".list").css({display: "none"});
+		$(".profile-intro").removeClass("shad");
+	})
+});
+
+$(function() {
+	$(window).on("scroll", function() {
+		$("#tester").text($(document).scrollTop());
 	})
 })
+$(document).ready(function() {
+	let $body = $("html, body");
+	$(".item-1").on("click", function() {
+		$body.animate({scrollTop: 802}, 1000);
+	})
+	$(".item-nav-1").on("click", function() {
+		$body.animate({scrollTop: 802}, 1000);
+	})
+	$(".item-2").on("click", function() {
+		$body.animate({scrollTop: 1501}, 1000);
+	})
+	$(".item-nav-2").on("click", function() {
+		$body.animate({scrollTop: 1501}, 1000);
+	})
+	$(".item-3").on("click", function() {
+		$body.animate({scrollTop: 2302}, 1000);
+	})
+	$(".item-nav-3").on("click", function() {
+		$body.animate({scrollTop: 2700}, 1000);
+	})
+});
+
+function animationSkills() {
+	let pageY = pageYOffset;
+	if (pageY > 2120) {
+		setTimeout(function() {$(".lin-1").animate({width: "95%"}, 2000);}, 1000);
+		setTimeout(function() {$(".lin-2").animate({width: "90%"}, 2000);}, 2000);
+		setTimeout(function() {$(".lin-3").animate({width: "85%"}, 2000);}, 3000);
+		setTimeout(function() {$(".lin-4").animate({width: "90%"}, 2000);}, 4000);
+		setTimeout(function() {$(".lin-5").animate({width: "95%"}, 2000);}, 5000);
+		setTimeout(function() {$(".lin-6").animate({width: "90%"}, 2000);}, 6000);
+		setTimeout(function() {$(".lin-7").animate({width: "75%"}, 2000);}, 7000);
+		setTimeout(function() {$(".lin-8").animate({width: "80%"}, 2000);}, 8000);
+		setTimeout(function() {$(".lin-9").animate({width: "99%"}, 2000);}, 9000);
+		setTimeout(function() {$(".lin-10").animate({width: "83%"}, 2000);}, 10000);
+	}
+	if (pageY > 2316) {
+		setTimeout(function() {$(".lin-11").animate({width: "100%"}, 2000);}, 1000);
+		setTimeout(function() {$(".lin-12").animate({width: "80%"}, 2000);}, 2000);
+		setTimeout(function() {$(".lin-13").animate({width: "50%"}, 2000);}, 3000);
+	}
+}
+window.onscroll = animationSkills;
+
