@@ -14,8 +14,15 @@ $(document).ready(function() {
 });
 
 $(function() {
-	$(window).on("scroll", function() {
+	$(document).on("scroll", function() {
 		$("#tester").text($(document).scrollTop());
+		let toko = pageYOffset;
+		if (toko > 800) {
+			$(".btnTop").css({display: "block"});
+		}
+		if (toko < 800) {
+			$(".btnTop").css({display: "none"});
+		}
 	})
 })
 $(document).ready(function() {
@@ -37,6 +44,15 @@ $(document).ready(function() {
 	})
 	$(".item-nav-3").on("click", function() {
 		$body.animate({scrollTop: 2700}, 1000);
+	})
+	$(".item-4").on("click", function() {
+		$body.animate({scrollTop: 3073}, 1000);
+	})
+	$(".item-nav-4").on("click", function() {
+		$body.animate({scrollTop: 3607}, 1000);
+	})
+	$(".btnTop").on("click", function() {
+		$("html, body").animate({scrollTop: 0}, 1000);
 	})
 });
 
@@ -62,3 +78,4 @@ function animationSkills() {
 }
 window.onscroll = animationSkills;
 
+let topValue = pageYOffset;
