@@ -19,6 +19,10 @@ html, body {
 	opacity: 0.5;
 	z-index: 3;
 	position: relative;
+	flex-grow: 1;
+	flex-shrink: 1;
+
+
 }
 .menu-items {
 	text-decoration: none;
@@ -27,6 +31,8 @@ html, body {
 	text-align: center;
 	font-size: 20px;
 	font-style:italic;
+	flex-grow: 1;
+
 
 }
 .container {
@@ -129,8 +135,8 @@ img {
 	color: #ffffff;
 }
 #profile-name {
-	font-family: tahoma;
-	font-style:italic;
+	font-family: Aguafina Script;
+	font-size: 30px;
 }
 .job-title {
 	font-family: Arial, Helvetica, sans-serif;
@@ -236,7 +242,7 @@ img {
   .btnDown {
     width: 200px;
     height: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color:  DodgerBlue;
     color: white;
     position: relative;
@@ -245,7 +251,7 @@ img {
     font-size: 18px;
     line-height: 3;
     cursor: pointer;
-    margin-left: 80px;
+    margin-left: 90px;
   }
   .btnDown:hover {
     background-color: royalblue;
@@ -282,39 +288,37 @@ img {
   	font-size: 35px;
   }
   .summary-about {
-  	background-image: url("http://i67.tinypic.com/2ch9xzn.jpg");
-  	width: 100%;
+  	background-image: url("http://i66.tinypic.com/vo0mtt.jpg");
+  	width: 100vw;
   	height: 700px;
   	background-repeat: no-repeat;
   	position: relative;
   	margin-top:730px;
   	display: flex;
   	flex-wrap: wrap;
+  	background-repeat: no-repeat;
+  	background-size: cover;
   }
   .summary {
   	position: absolute;
   	width: 600px;
   	height: inherit;
   	margin-left: 100px;
-  	
   	word-wrap: break-word;
-
-  	
   }
   #summary-head {
-  	color: #ffffff;
+  	color: #3b5998;
   	font-size: 60px;
   	font-style: italic;
   }
   #summary-title {
-  	color: #ffffff;
+  	color: #3b5998;
   	font-size: 35px;
   	font-family: sans-serif;
   }
   #summary-content {
-  	color: peru;
+  	color: #ffffff;
   	font-size: 30px;
-
   }
   .edu-exp {
   	width: 100%;
@@ -658,10 +662,20 @@ img {
 		margin-left: 25vw;
 		
 	}
+	#gallery-screen{
+		width: 100vw;
+		left: 2vw;
+	}
 	
-
-
+	#gallery-container {
+		width: 100vw;
+	}
+	.mgmg {
+		width: inherit;
+		transform: scale(0.6);
+	}
 }
+
 @media only screen and (max-width: 640px) and (min-width: 320px) {
 	.parallax {
 		display: none;
@@ -711,6 +725,10 @@ img {
 	.footer-btn {
 		margin-top: -10px;
 	}
+	#gallery-screen {
+		width: inherit;
+		margin-left: -250px;
+	}
 }
 
 .btnTop {
@@ -736,3 +754,52 @@ img {
   margin-top: 15px;
   transform: rotate(225deg);
 }
+
+#gallery {
+	width: 100vw;
+	height: 700px;
+	background-color: #f9f8f6;
+	position: relative;
+	margin-top: -30px;
+
+
+}
+
+#gallery-head {
+	color: #3b5998;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-style: italic;
+	font-size: 30px;
+	margin-left: 50px;
+	
+	padding-top: 50px;
+}
+#gallery-container {
+	width: 100vw;
+	height: 400px;
+	background-color: #2b2b2b;
+	align-items: center;
+	margin-top: 80px;
+	display: flex;
+}
+#gallery-screen {
+	width: 700px;
+	height: inherit;
+	background-color: #2b2b2b;
+	display: flex;
+	left:22%;
+	position: absolute;
+	border-top: 20px dashed #212121;
+	border-bottom: 20px dashed #212121;
+	height: 360px;
+	overflow-x: hidden;
+	z-index: 2;
+
+}
+.mgmg {
+	height: 357px;
+	transition: 1s;
+	width: 100%;
+
+}
+
