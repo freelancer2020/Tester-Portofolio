@@ -2,14 +2,20 @@ $(document).ready(function() {
 	$(".box").on("click", function() {
 		$(".list").toggle();
 		$(".profile-intro").addClass("shad");
+		$(".contact-media").addClass("shad");
+		$(".btnDown").addClass("shad");
 	});
 	$(".close-list").on("click", function() {
 		$(".list").css({display: "none"});
 		$(".profile-intro").removeClass("shad");
+		$(".contact-media").removeClass("shad");
+		$(".btnDown").removeClass("shad");
 	});
 	$(".items").on("click", function() {
 		$(".list").css({display: "none"});
 		$(".profile-intro").removeClass("shad");
+		$(".contact-media").removeClass("shad");
+		$(".btnDown").removeClass("shad");
 	})
 });
 
@@ -46,11 +52,18 @@ $(document).ready(function() {
 		$body.animate({scrollTop: 2700}, 1000);
 	})
 	$(".item-4").on("click", function() {
-		$body.animate({scrollTop: 3073}, 1000);
+		$body.animate({scrollTop: 3773}, 1000);
 	})
 	$(".item-nav-4").on("click", function() {
-		$body.animate({scrollTop: 3607}, 1000);
+		$body.animate({scrollTop: 3773}, 1000);
 	})
+	$(".item-5").on("click", function() {
+		$body.animate({scrollTop: 3073}, 1000);
+	})
+	$(".item-nav-5").on("click", function() {
+		$body.animate({scrollTop: 3600}, 1000);
+	})
+
 	$(".btnTop").on("click", function() {
 		$("html, body").animate({scrollTop: 0}, 1000);
 	})
@@ -76,6 +89,56 @@ function animationSkills() {
 		setTimeout(function() {$(".lin-13").animate({width: "50%"}, 2000);}, 3000);
 	}
 }
+
 window.onscroll = animationSkills;
 
 let topValue = pageYOffset;
+$(".btnDown").on("click", function() {
+	alert("pdf version will be added soon!");
+})
+
+
+let photos = document.getElementById("gallery-screen").children;
+  let i, arr =[]; 
+  const conta = document.getElementsByClassName("container")[0];
+
+
+function test() {
+  let x = -1;
+  for (i = 0; i < photos.length; i++) {
+    arr.push(photos[i]);
+  }
+  let start = setInterval(function() {
+    x++;
+    arr[x].style.marginLeft = "-700px";
+    //conta.classList.toggle("pom");
+    if (x > photos.length -3) {
+      clearInterval(start);
+      setTimeout(function() {
+        back();
+      }, 3000);
+    } 
+  }, 3000);
+}
+
+test();
+
+function back() {
+  let v = photos.length - 1;
+  let asc, malborn, saga, ron =[];
+  for (let x = 0; x < photos.length; x++) {
+    ron.push(photos[x]);
+  }
+  saga = setInterval(function() {
+    v--;
+    ron[v].style.marginLeft = "0px";
+    if (v == 0) {
+      clearInterval(ron);
+      test();
+    }
+  },400);
+}
+
+ 
+ 	
+
