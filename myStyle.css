@@ -738,9 +738,10 @@ img {
   cursor: pointer;
   position: fixed;
   bottom: 0;
-  right:0;
+  right: 0;
   opacity: 0.5;
   display: none;
+  margin-right: 10px;
   
 }
 #arow {
@@ -751,8 +752,11 @@ img {
   display: inline-block;
   padding: 5px;
   margin-left: 14px;
-  margin-top: 15px;
+  margin-top: 20px;
   transform: rotate(225deg);
+}
+.btnTop:hover {
+ background-color: royalblue;
 }
 
 #gallery {
@@ -761,8 +765,6 @@ img {
 	background-color: #f9f8f6;
 	position: relative;
 	margin-top: -30px;
-
-
 }
 
 #gallery-head {
@@ -771,9 +773,9 @@ img {
 	font-style: italic;
 	font-size: 30px;
 	margin-left: 50px;
-	
 	padding-top: 50px;
 }
+
 #gallery-container {
 	width: 100vw;
 	height: 400px;
@@ -782,6 +784,7 @@ img {
 	margin-top: 80px;
 	display: flex;
 }
+
 #gallery-screen {
 	width: 700px;
 	height: inherit;
@@ -794,12 +797,12 @@ img {
 	height: 360px;
 	overflow-x: hidden;
 	z-index: 2;
-
 }
+
 .mgmg {
 	height: 357px;
 	transition: 1s;
 	width: 100%;
-
 }
+
 
