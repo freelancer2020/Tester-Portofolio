@@ -98,12 +98,14 @@ $(".btnDown").on("click", function() {
 })
 
 
-let photos = document.getElementById("gallery-screen").children;
-  let i, arr =[]; 
-  const conta = document.getElementsByClassName("container")[0];
+
+  
+  
 
 
 function test() {
+  let photos = document.getElementById("gallery-screen").children;
+  let i, arr =[]; 
   let x = -1;
   for (i = 0; i < photos.length; i++) {
     arr.push(photos[i]);
@@ -111,7 +113,6 @@ function test() {
   let start = setInterval(function() {
     x++;
     arr[x].style.marginLeft = "-700px";
-    //conta.classList.toggle("pom");
     if (x > photos.length -3) {
       clearInterval(start);
       setTimeout(function() {
@@ -121,13 +122,14 @@ function test() {
   }, 3000);
 }
 
-test();
+
 
 function back() {
-  let v = photos.length - 1;
+  let photosTwo = document.getElementById("gallery-screen").children;
+  let v = photosTwo.length - 1;
   let asc, malborn, saga, ron =[];
-  for (let x = 0; x < photos.length; x++) {
-    ron.push(photos[x]);
+  for (let x = 0; x < photosTwo.length; x++) {
+    ron.push(photosTwo[x]);
   }
   saga = setInterval(function() {
     v--;
@@ -139,6 +141,7 @@ function back() {
   },400);
 }
 
+test();
  
  	
 
