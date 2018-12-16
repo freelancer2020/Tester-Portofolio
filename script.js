@@ -55,7 +55,7 @@ $(document).ready(function() {
 		$body.animate({scrollTop: 3773}, 1000);
 	})
 	$(".item-nav-4").on("click", function() {
-		$body.animate({scrollTop: 3773}, 1000);
+		$body.animate({scrollTop: 4250}, 1000);
 	})
 	$(".item-5").on("click", function() {
 		$body.animate({scrollTop: 3073}, 1000);
@@ -88,6 +88,7 @@ function animationSkills() {
 		setTimeout(function() {$(".lin-12").animate({width: "80%"}, 2000);}, 2000);
 		setTimeout(function() {$(".lin-13").animate({width: "50%"}, 2000);}, 3000);
 	}
+
 }
 
 window.onscroll = animationSkills;
@@ -99,18 +100,20 @@ $(".btnDown").on("click", function() {
 
 
 
-  let photos = document.getElementById("gallery-screen");
+  
   
 function test() {
+  //let photos = document.getElementById("gallery-screen");
   let i, arr =[]; 
   let x = -1;
-  let photosList = photos.children;
+  let photosList = $("#gallery-screen").children();  // jquery solution for server side
   for (i = 0; i < photosList.length; i++) {
     arr.push(photosList[i]);
   }
   let start = setInterval(function() {
     x++;
-    arr[x].style.marginLeft = "-700px";
+   // arr[x].style.marginLeft = "-700px"; plain JavaScript also working
+   $(arr[x]).css({marginLeft: "-700px"});  //jquery solution
     if (x > photosList.length -3) {
       clearInterval(start);
       setTimeout(function() {
@@ -123,24 +126,28 @@ function test() {
 
 
 function back() {
- // let photosTwo = document.getElementById("gallery-screen").children;
+ // let photosTwo = document.getElementById("gallery-screen");
   let malborn, saga, arr_2 =[];
-  let asc = photos.children;
+  let asc = $("#gallery-screen").children();  // jquery solution for server side
   let v = asc.length - 1;
   for (let n = 0; n < asc.length; n++) {
     arr_2.push(asc[n]);
   }
   saga = setInterval(function() {
     v--;
-    arr_2[v].style.marginLeft = "0px";
+    $(arr_2[v]).css({marginLeft: "0px"});  // jquery solution for server side
     if (v == 0) {
       clearInterval(saga);
       test();
     }
-  },400);
+  },500);
 }
 
-test();
+window.onload = test;
  
  	
-
+/*
+window.onclick = function() {
+	alert($(window).scrollTop());
+}
+*/
