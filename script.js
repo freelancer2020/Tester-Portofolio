@@ -99,18 +99,19 @@ $(".btnDown").on("click", function() {
 
 
 
-  let photos = document.getElementById("gallery-screen").children;
+  let photos = document.getElementById("gallery-screen");
   
 function test() {
   let i, arr =[]; 
   let x = -1;
-  for (i = 0; i < photos.length; i++) {
-    arr.push(photos[i]);
+  let photosList = photos.children;
+  for (i = 0; i < photosList.length; i++) {
+    arr.push(photosList[i]);
   }
   let start = setInterval(function() {
     x++;
     arr[x].style.marginLeft = "-700px";
-    if (x > photos.length -3) {
+    if (x > photosList.length -3) {
       clearInterval(start);
       setTimeout(function() {
         back();
@@ -123,10 +124,11 @@ function test() {
 
 function back() {
  // let photosTwo = document.getElementById("gallery-screen").children;
-  let v = photos.length - 1;
-  let asc, malborn, saga, arr_2 =[];
-  for (let x = 0; x < photos.length; x++) {
-    arr_2.push(photos[x]);
+  let malborn, saga, arr_2 =[];
+  let asc = photos.children;
+  let v = asc.length - 1;
+  for (let n = 0; n < asc.length; n++) {
+    arr_2.push(asc[n]);
   }
   saga = setInterval(function() {
     v--;
