@@ -87,7 +87,7 @@ html, body {
 	margin-top: 3px;
 	height:3px;
 	width: inherit;
-	background-color: black;
+	background-color: #ffffff;
 	border-radius: 5px;
 }
 .items:hover {
@@ -563,10 +563,12 @@ img {
 #left-side-footer {
 	width: 500px;
 	text-align: center;
+	margin-top: 100px;
 }
 #right-side-footer {
 	width: 500px;
 	text-align: center;
+	margin-top: 105px;
 }
 #head-footer {
 	font-style: italic;
@@ -630,8 +632,7 @@ img {
 	}
 	
 	#summary-content {
-		font-size: 6vw;
-		margin-left:0px;
+		transform: scale(0.9);
 	}
 	.parallax {
 		display: none;
@@ -658,21 +659,28 @@ img {
 		text-align: center;
 	}
 	.footer-btn {
-		
 		margin-left: 25vw;
-		
 	}
 	#gallery-screen{
 		width: 100vw;
-		left: 2vw;
 	}
 	
 	#gallery-container {
+		transform: scale(0.6);
 		width: 100vw;
+		position: absolute;
+		left:-23vw;
 	}
 	.mgmg {
-		width: inherit;
-		transform: scale(0.6);
+		width: 100vw;
+	    
+		
+	}
+	#left-side-footer {
+		margin-top: -10px;
+	}
+	#right-side-footer {
+		margin-top: -10px;
 	}
 }
 
@@ -725,11 +733,51 @@ img {
 	.footer-btn {
 		margin-top: -10px;
 	}
-	#gallery-screen {
-		width: inherit;
-		margin-left: -250px;
+	#gallery-screen{
+		width: 100vw;
+		left: 0;
+	}
+	
+	.mgmg {
+		width: 100vw;
+	}
+	#left-side-footer {
+		margin-top: -10px;
+	}
+	#right-side-footer {
+		margin-top: -10px;
+
+	}
+	#mail-footer {
+		margin-left: -90px;
+	}
+	.footer-btn {
+		margin-left: -5px;
 	}
 }
+@media only screen and (max-width: 900px) {
+	#right-side-footer {
+		margin-top: -20px;
+		margin-left: 100px;	}
+	#left-side-footer {
+		margin-top: -15px;
+	}
+	#gallery-screen{
+		width: 100vw;
+		margin-left: -17.5%;
+	}
+	
+	.mgmg {
+		width: 100vw;
+	}
+	.intro-parallax {
+		margin-top: -50px;
+	}
+	#gallery {
+		width: 100vw;
+	}
+}
+
 
 .btnTop {
   width: 45px;
@@ -780,9 +828,7 @@ img {
 	width: 100vw;
 	height: 400px;
 	background-color: #2b2b2b;
-	align-items: center;
 	margin-top: 80px;
-	display: flex;
 }
 
 #gallery-screen {
@@ -796,7 +842,7 @@ img {
 	border-bottom: 20px dashed #212121;
 	height: 360px;
 	overflow-x: hidden;
-	z-index: 2;
+	
 }
 
 .mgmg {
