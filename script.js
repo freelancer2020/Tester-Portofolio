@@ -99,12 +99,9 @@ $(".btnDown").on("click", function() {
 
 
 
-  
-  
-
-
-function test() {
   let photos = document.getElementById("gallery-screen").children;
+  
+function test() {
   let i, arr =[]; 
   let x = -1;
   for (i = 0; i < photos.length; i++) {
@@ -125,17 +122,17 @@ function test() {
 
 
 function back() {
-  let photosTwo = document.getElementById("gallery-screen").children;
-  let v = photosTwo.length - 1;
-  let asc, malborn, saga, ron =[];
-  for (let x = 0; x < photosTwo.length; x++) {
-    ron.push(photosTwo[x]);
+ // let photosTwo = document.getElementById("gallery-screen").children;
+  let v = photos.length - 1;
+  let asc, malborn, saga, arr_2 =[];
+  for (let x = 0; x < photos.length; x++) {
+    arr_2.push(photos[x]);
   }
   saga = setInterval(function() {
     v--;
-    ron[v].style.marginLeft = "0px";
+    arr_2[v].style.marginLeft = "0px";
     if (v == 0) {
-      clearInterval(ron);
+      clearInterval(saga);
       test();
     }
   },400);
