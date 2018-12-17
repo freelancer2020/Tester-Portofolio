@@ -88,6 +88,42 @@ function animationSkills() {
 		setTimeout(function() {$(".lin-12").animate({width: "80%"}, 2000);}, 2000);
 		setTimeout(function() {$(".lin-13").animate({width: "50%"}, 2000);}, 3000);
 	}
+	if (pageY > 750) {
+		$(".aside-menu-container").css({display: "block"});
+		$(".aside-btn-2").addClass("openAside");
+	} else {
+		$(".aside-menu-container").css({display: "none"});
+	}
+	if (pageY > 1195) {
+		$(".aside-btn-2").removeClass("openAside");
+		$(".aside-btn-3").addClass("openAside");
+	} else {
+		$(".aside-btn-3").removeClass("openAside");
+	}
+	if (pageY > 1950) {
+		$(".aside-btn-3").removeClass("openAside");
+		$(".aside-btn-4").addClass("openAside");
+	} else {
+		$(".aside-btn-4").removeClass("openAside");
+	}
+	if (pageY > 2672) {
+		$(".aside-btn-4").removeClass("openAside");
+		$(".aside-btn-5").addClass("openAside");
+	} else {
+		$(".aside-btn-5").removeClass("openAside");
+	}
+	if (pageY > 3317) {
+		$(".aside-btn-5").removeClass("openAside");
+		$(".aside-btn-6").addClass("openAside");
+	} else {
+		$(".aside-btn-6").removeClass("openAside");
+	}
+	if (pageY > 3915) {
+		$(".aside-btn-6").removeClass("openAside");
+		$(".aside-btn-7").addClass("openAside");
+	} else {
+		$(".aside-btn-7").removeClass("openAside");
+	}
 
 }
 
@@ -97,7 +133,6 @@ let topValue = pageYOffset;
 $(".btnDown").on("click", function() {
 	alert("pdf version will be added soon!");
 })
-
 
 
   
@@ -145,9 +180,70 @@ function back() {
 
 window.onload = test;
  
- 	
 /*
+
 window.onclick = function() {
 	alert($(window).scrollTop());
 }
+
 */
+
+
+
+$(function() {
+  $(".asides").hover(function(e) {
+    let $target = e.target.textContent;
+    switch($target) {
+      case "Profile":
+        $(e.target).toggleClass("coolos");
+        //$(e.target).css({textAlign: "center"});
+        break;
+      case "About":
+         $(e.target).toggleClass("coolos");
+        break;
+      case "Experience":
+         $(e.target).toggleClass("coolos");
+        break;
+      case "Skills":
+         $(e.target).toggleClass("coolos");
+        break;
+      case "Gallery":
+         $(e.target).toggleClass("coolos");
+        break;
+      case "Awards":
+         $(e.target).toggleClass("coolos");
+        break;
+      case "GitHub":
+         $(e.target).toggleClass("coolos");
+        break;
+      default:
+        return;
+        
+    }
+  });
+});
+
+$(function() {
+	let $home = $("html, body");
+	$(".aside-btn-1").on("click", function() {
+		$home.animate({scrollTop: 0}, 1000);
+	})
+	$(".aside-btn-2").on("click", function() {
+		$home.animate({scrollTop: 801}, 1000);
+	})
+	$(".aside-btn-3").on("click", function() {
+		$home.animate({scrollTop: 1501}, 1000);
+	})
+	$(".aside-btn-4").on("click", function() {
+		$home.animate({scrollTop: 2311}, 1000);
+	})
+	$(".aside-btn-5").on("click", function() {
+		$home.animate({scrollTop: 3081}, 1000);
+	})
+	$(".aside-btn-6").on("click", function() {
+		$home.animate({scrollTop: 3773}, 1000);
+	})
+	$(".aside-btn-7").on("click", function() {
+		$home.animate({scrollTop: 4245}, 1000);
+	})
+})
