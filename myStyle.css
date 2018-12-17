@@ -69,7 +69,6 @@ html, body {
 	background-color: royalblue;
 	align-items: center;
 	color: #ffffff;
-
 }
 .content {
 	width: 100%;
@@ -91,10 +90,10 @@ html, body {
 	border-radius: 5px;
 }
 .items:hover {
-	color: #a1887f;
+	color: #1dcaff;
 }
 .menu-items:hover {
-	color: #a1887f;
+	color: #1dcaff;
 }
 .wall {
 	background-image: url("http://i68.tinypic.com/9jk41y.jpg");
@@ -126,7 +125,6 @@ img {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-
 }
 .profile-intro {
 	width: inherit;
@@ -144,7 +142,6 @@ img {
 #contact-email{
 	font-family: Arial, Helvetica, sans-serif;
 	margin-top: 50px;
-
 }
 #contact-mob {
 	font-family: Arial, Helvetica, sans-serif;
@@ -243,7 +240,7 @@ img {
     width: 200px;
     height: 50px;
     margin-top: 50px;
-    background-color:  DodgerBlue;
+    background-color: DodgerBlue;
     color: white;
     position: relative;
     text-align: center;
@@ -335,6 +332,7 @@ img {
   	width: 500px;
   	height: auto;
   	color: #212121;
+  	margin-left: 8px;
   }
   #edu-head {
   	color: #3b5998;
@@ -396,7 +394,7 @@ img {
   #content-3 {
   	font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  #tester {
+#tester {
   	width: 100px;
   	height: 40px;
   	color: #ffffff;
@@ -407,7 +405,7 @@ img {
   	background-color: red;
   	margin-left: 120px;
   }
-  .close-list {
+.close-list {
   width: 20px;
   height: 20px;
   position: relative;
@@ -507,6 +505,7 @@ img {
 #aw {
 	width: 500px;
 	margin-top: 50px;
+	margin-left: 8px;
 
 }
 #int {
@@ -642,6 +641,7 @@ img {
 	}
 	#edu {
 		text-align: center;
+		margin-left: 0px;
 	}
 	.list {
 		width: 100vw;
@@ -651,6 +651,7 @@ img {
 	}
 	#aw {
 		text-align: center;
+		margin-left: 0px;
 	}
 	#mail-footer {
 		margin-left: 40px;
@@ -682,6 +683,10 @@ img {
 	#right-side-footer {
 		margin-top: -10px;
 	}
+	#aside-menu {
+		display: none;
+	}
+
 }
 
 @media only screen and (max-width: 640px) and (min-width: 320px) {
@@ -709,6 +714,7 @@ img {
 	}
 	#edu {
 		text-align: center;
+		margin-left: 0px;
 	}
 	.list {
 		width: 100vw;
@@ -729,6 +735,7 @@ img {
 	}
 	#aw {
 		text-align: center;
+		margin-left: 0px;
 	}
 	.footer-btn {
 		margin-top: -10px;
@@ -753,6 +760,9 @@ img {
 	}
 	.footer-btn {
 		margin-left: -5px;
+	}
+	#aside-menu {
+		display: none;
 	}
 }
 @media only screen and (max-width: 900px) {
@@ -852,3 +862,45 @@ img {
 }
 
 
+
+
+
+
+
+
+
+
+
+.aside-menu-container {
+  height: auto;
+  position: fixed;
+  z-index: 99;
+  margin-top: 200px;
+  display: none;
+}
+.asides {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color:  DodgerBlue;
+  font-family: arial;
+  margin-bottom: 1px;
+  line-height: 3;
+  margin-left: -80px;
+  transition: 0.5s ease-out;
+  opacity: 0.5;
+  border-radius: 0 5px 5px 0;
+
+}
+
+.coolos {
+  margin-left: -12px;
+  text-align: center;
+  opacity: 1;
+}
+.openAside {
+	margin-left: -10px;
+	text-align: center;
+	opacity: 1;
+}
