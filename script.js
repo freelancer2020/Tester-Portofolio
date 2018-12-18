@@ -127,7 +127,7 @@ function animationSkills() {
 	}
 	if (pageY > 4100) {
 		setTimeout(function() {
-			$("#msg").css({marginTop: "100px"});
+			$(".container-alert-msg").css({marginTop: "40px"});
 		}, 2000);
 	}
 
@@ -254,11 +254,9 @@ $(function() {
 	})
 })
 
-
-
 $(function() {
-  $("#box-close").on("click", function() {
-    $("#msg").css({transform: 'scale(0, 0)'});
-  })
-});
+	$(".close-box").on("click", function() {
+		$(".container-alert-msg").css({transform: "scale(0, 0)"}, 1000);
+	})
+})
 
