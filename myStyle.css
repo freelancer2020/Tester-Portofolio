@@ -684,6 +684,9 @@ img {
 	#aside-menu {
 		display: none;
 	}
+	#msg {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 640px) and (min-width: 320px) {
@@ -761,6 +764,10 @@ img {
 	#aside-menu {
 		display: none;
 	}
+	#msg {
+		display: none;
+	}
+	
 }
 @media only screen and (max-width: 900px) {
 	#right-side-footer {
@@ -782,6 +789,9 @@ img {
 	}
 	#gallery {
 		width: 100vw;
+	}
+	#msg {
+		display: none;
 	}
 
 	
@@ -903,65 +913,98 @@ img {
 }
 
 
-#msg {
+.container-alert-msg {
+  width: 700px;
+  height: 300px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position: fixed;
+  margin:auto;
+  margin-top: -320px;
+  transition: 0.5s ease-out;
+}
+.msg {
   width: 500px;
-  background-color: #4CAF50;
-  padding: 10px;
-  color: #ffffff;
-  border: 20px solid #3EA055;
-  font-family: georgia;
+  height: 150px;
   display: flex;
   flex-wrap: wrap;
-  transition: 0.5s ease-out;
-  position: fixed;
-  z-index: 99;
+  border: 20px solid #3EA055;
+  position: absolute;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-family: georgia;
+  font-size: 20px;
   top: 0;
-  left: 0;
-  right:0;
+  left:0;
+  bottom:0;
+  right: 0;
   margin: auto;
-  margin-top: -200px;
-  box-shadow: 10px 10px 10px lightgray;
+  box-shadow: 10px 10px 50px gray;
+ 
   
 }
-#box-close {
-  position: absolute;
-  margin-left: 510px;
-  margin-top: -30px;
+.close-box {
+  width: 40px;
+  height: 40px;
+  background-color: #3EA055;
+  border-radius: 50%;
+  top:0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  
-  
+  margin-top: 30px;
+
 }
 .rr {
   width: 20px;
   height: 1px;
   background-color: #ffffff;
-  transition: 0.5s ease-out;
+  
 }
-#r-1 {
+.r-1 {
+  position: absolute;
   transform: rotate(45deg);
-  margin-top: 11px;
-  position: absolute;
+  margin-top: 17px;
+  margin-left: 10px;
 }
-#r-2 {
+.r-2 {
+  position: absolute;
   transform: rotate(-45deg);
-  margin-top: 11px;
-  position: absolute;
+  margin-top: 17px;
+  margin-left: 10px;
 }
 
-#box-close:hover #r-1{
-  background-color: #2b2b2b;
+#msg-head {
+	font-weight: bold;
+	
 }
-#box-close:hover #r-2 {
-  background-color: #2b2b2b;
-}
-
-
 #msg-topic {
-	font-size: 20px
+	margin-top: 20px;
 }
 
+.phero {
+	background-color: rgba(0, 0, 0, 0.4);
+}
 
+@media only screen and (max-width: 640px) and (min-width: 360px) {
 
+.msg {
+ width: 320px;
+ display: inline-flex;
+ flex-wrap: wrap;
+}
 
+.container-alert-msg {
+ width: 100vw;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+	
+	
+}
