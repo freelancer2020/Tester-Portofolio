@@ -109,6 +109,7 @@ function animationSkills() {
 	if (pageY > 2672) {
 		$(".aside-btn-4").removeClass("openAside");
 		$(".aside-btn-5").addClass("openAside");
+
 	} else {
 		$(".aside-btn-5").removeClass("openAside");
 	}
@@ -123,6 +124,11 @@ function animationSkills() {
 		$(".aside-btn-7").addClass("openAside");
 	} else {
 		$(".aside-btn-7").removeClass("openAside");
+	}
+	if (pageY > 4100) {
+		setTimeout(function() {
+			$("#msg").css({marginTop: "100px"});
+		}, 2000);
 	}
 
 }
@@ -247,3 +253,12 @@ $(function() {
 		$home.animate({scrollTop: 4245}, 1000);
 	})
 })
+
+
+
+$(function() {
+  $("#box-close").on("click", function() {
+    $("#msg").css({transform: 'scale(0, 0)'});
+  })
+});
+
