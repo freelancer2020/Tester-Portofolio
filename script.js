@@ -69,8 +69,11 @@ $(document).ready(function() {
 	})
 });
 
+
+
 function animationSkills() {
-	let pageY = pageYOffset;
+	  let pageY = pageYOffset;
+
 	if (pageY > 2120) {
 		setTimeout(function() {$(".lin-1").animate({width: "95%"}, 2000);}, 1000);
 		setTimeout(function() {$(".lin-2").animate({width: "90%"}, 2000);}, 2000);
@@ -125,20 +128,20 @@ function animationSkills() {
 	} else {
 		$(".aside-btn-7").removeClass("openAside");
 	}
-	if (pageY > 4100) {
+	if ( $(window).scrollTop() + $(window).height() == $(document).height() ) {
 		setTimeout(function() {
 			$(".container-alert-msg").css({marginTop: "40px"});
-		}, 2000);
+		}, 2500);
 	}
-
 }
+
 
 window.onscroll = animationSkills;
 
 let topValue = pageYOffset;
 $(".btnDown").on("click", function() {
 	alert("pdf version will be added soon!");
-})
+});
 
 
   
@@ -252,11 +255,30 @@ $(function() {
 	$(".aside-btn-7").on("click", function() {
 		$home.animate({scrollTop: 4245}, 1000);
 	})
-})
+});
 
 $(function() {
 	$(".close-box").on("click", function() {
 		$(".container-alert-msg").css({transform: "scale(0, 0)"}, 1000);
+		$(".container-alert-msg").removeClass("nor");
 	})
-})
+});
 
+function visitorMsg() {
+	const visMsg = "For visiting my application. Always happy to hear from you.";
+	let tableMsg = document.getElementById("msg-topic");
+	let o = -1;
+	let startMsg = setInterval(function() {
+		o++;
+		tableMsg.textContent += visMsg.charAt(o);
+	}, 200);
+}
+function algoMsg() {
+	if ($(".container-alert-msg").css("marginTop") != "0px") {
+		setTimeout(function() {
+			return visitorMsg();
+		}, 4000);
+	}
+}
+
+algoMsg();
