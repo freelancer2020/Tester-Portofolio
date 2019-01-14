@@ -129,9 +129,10 @@ function animationSkills() {
 		$(".aside-btn-7").removeClass("openAside");
 	}
 	if ( $(window).scrollTop() + $(window).height() == $(document).height() ) {
-		setTimeout(function() {
-			$(".container-alert-msg").css({marginTop: "40px"});
-		}, 2500);
+		setTimeout(function() {$(".container-alert-msg").css({marginTop: "40px"});
+			algoMsg();
+		}, 2000);
+			
 	}
 }
 
@@ -264,6 +265,7 @@ $(function() {
 	})
 });
 
+
 function visitorMsg() {
 	const visMsg = "For visiting my application. Always happy to hear from you.";
 	let tableMsg = document.getElementById("msg-topic");
@@ -271,14 +273,11 @@ function visitorMsg() {
 	let startMsg = setInterval(function() {
 		o++;
 		tableMsg.textContent += visMsg.charAt(o);
-	}, 200);
+	}, 150);
 }
 function algoMsg() {
 	if ($(".container-alert-msg").css("marginTop") != "0px") {
-		setTimeout(function() {
 			return visitorMsg();
-		}, 4000);
 	}
 }
 
-algoMsg();
