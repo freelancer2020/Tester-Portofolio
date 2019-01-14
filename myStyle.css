@@ -848,7 +848,6 @@ img {
 	height: 400px;
 	background-color: #2b2b2b;
 	margin-top: 80px;
-	
 
 }
 
@@ -857,19 +856,28 @@ img {
 	height: inherit;
 	background-color: #2b2b2b;
 	display: flex;
-	left:22%;
+	display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	left:50%;
+	margin-left: -360px;
 	position: absolute;
 	border-top: 20px dashed #212121;
 	border-bottom: 20px dashed #212121;
 	height: 360px;
 	overflow-x: hidden;
-	
+	-ms-overflow-x: hidden;
+	-webkit-overflow-x: hidden;
+	-moz-overflow-x: hidden;
+
 }
 
 .mgmg {
 	height: 357px;
 	transition: 1s;
 	width: 100%;
+
 }
 
 
@@ -1005,6 +1013,8 @@ img {
  flex-wrap: wrap;
 }
 
-	
-	
+}
+
+.nor {
+	color: #ffffff;
 }
