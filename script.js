@@ -129,8 +129,8 @@ function animationSkills() {
 		$(".aside-btn-7").removeClass("openAside");
 	}
 	if ( $(window).scrollTop() + $(window).height() == $(document).height() ) {
-		setTimeout(function() {$(".container-alert-msg").css({marginTop: "40px"});
-			algoMsg();
+		setTimeout(function() {
+			visitorMsg();
 		}, 2000);
 			
 	}
@@ -267,17 +267,33 @@ $(function() {
 
 
 function visitorMsg() {
-	const visMsg = "For visiting my application. Always happy to hear from you.";
+	const visMsg = "For visiting my application. Always happy to hear from you!";
+	const homeMsg = document.getElementsByClassName("container-alert-msg")[0];
 	let tableMsg = document.getElementById("msg-topic");
 	let o = -1;
+	const rop = document.getElementsByClassName("container-alert-msg")[0];
+	rop.classList.add("slideDown");
+	if (rop.classList.contains("slideDown")) {
+		$("body, html").addClass("mangoMsg");	
+	}
 	let startMsg = setInterval(function() {
 		o++;
 		tableMsg.textContent += visMsg.charAt(o);
+		if (o > visMsg.length -1) {
+			clearInterval(startMsg);
+			setTimeout(function() {
+				homeMsg.style.display = "none";
+				$("body, html").removeClass("mangoMsg");
+				rop.classList.removeClass("slideDown");
+			}, 2000);
+		}
 	}, 150);
 }
+/*
 function algoMsg() {
 	if ($(".container-alert-msg").css("marginTop") != "0px") {
 			return visitorMsg();
 	}
 }
 
+*/
