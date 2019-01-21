@@ -670,7 +670,6 @@ img {
 		transform: scale(0.6);
 		width: 100vw;
 		position: absolute;
-		left:-23vw;
 	}
 	.mgmg {
 		width: 100vw;
@@ -793,8 +792,6 @@ img {
 	#msg {
 		display: none;
 	}
-
-	
 }
 
 
@@ -875,7 +872,6 @@ img {
 	height: 357px;
 	transition: 1s;
 	width: 100%;
-
 }
 
 
