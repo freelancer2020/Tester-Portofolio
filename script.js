@@ -284,7 +284,7 @@ function visitorMsg() {
 			setTimeout(function() {
 				homeMsg.style.display = "none";
 				$("body, html").removeClass("mangoMsg");
-				rop.classList.removeClass("slideDown");
+				rop.classList.remove("slideDown");
 			}, 2000);
 		}
 	}, 150);
