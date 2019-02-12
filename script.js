@@ -140,12 +140,13 @@ function animationSkills() {
 window.onscroll = animationSkills;
 
 let topValue = pageYOffset;
+/*
 $(".btnDown").on("click", function() {
 	alert("pdf version will be added soon!");
 });
 
 
-  
+ */
   
 function test() {
   //let photos = document.getElementById("gallery-screen");
@@ -297,3 +298,95 @@ function algoMsg() {
 }
 
 */
+
+
+
+
+function openCodePin() {
+	const codeReader = document.getElementById("pin-code-container");
+	codeReader.style.display = "block";
+}
+
+const userDownload = document.getElementsByClassName("btnDown")[0];
+userDownload.addEventListener("click", openCodePin, false);
+
+const mainPin = document.getElementById("pin-code-container");
+
+
+let wrongPin = document.getElementById("incor");
+function validation() {
+  let userInput = document.getElementsByTagName("input");
+  let i, arr = [];
+  for (i = 0; i < userInput.length; i++) {
+    arr.push(userInput[i].value);
+  }
+  if (arr[0] == 9 && arr[1] == 9 && arr[2] == 0 && arr[3] == 1) {
+  	user.style.cursor = "wait";
+    wrongPin.style.color = "#212121";
+    platinum();
+    setTimeout(function() {
+      mainPin.style.display = "none";
+      window.open("http://mysuitapp.com/cv.pdf");
+      user.style.cursor = "";
+      for (let x = 0; x < userInput.length; x++) {
+      	userInput[x].value = "";
+      }
+    }, 5000);
+} else {
+  wrongPin.style.color = "#FF2400";
+}
+}
+
+const user = document.getElementById("log");
+user.addEventListener("click", validation, false);
+
+
+
+
+function rock() {
+  let inputs = document.getElementsByTagName("input");
+  let i = 0;
+  return function() {
+    i++;
+    inputs[i].focus();
+  }
+}
+
+
+let inputing = document.getElementsByClassName("inpG");
+let mask = rock();
+for (let n = 0; n < inputing.length; n++) {
+  inputing[n].onkeyup = mask;
+}
+
+
+function platinum() {
+  let vali = document.getElementsByClassName("load");
+  let i = -1;
+  let start = setInterval(function() {
+    i++;
+    vali[i].classList.add("green");
+    if (i > vali.length -1) {
+      clearInterval(start);
+    }
+  }, 1000);
+  setTimeout(function() {
+  	for (let x = 0; x < vali.length; x++) {
+      	vali[x].classList.remove("green");
+      }
+  }, 5000);
+}
+
+function cancelPin() {
+  const homePin = document.getElementById("pin-code-container");
+  homePin.style.display = "none";
+  for(let i = 0; i < inputing.length; i++) {
+  	inputing[i].value = "";
+  }
+  wrongPin.style.color = "";
+}
+const userCancel = document.getElementById("cancel");
+userCancel.addEventListener("click", cancelPin, false);
+
+
+  
