@@ -686,6 +686,11 @@ img {
 	#msg {
 		display: none;
 	}
+	#pin-code-container {
+		width: 100vw;
+		transform: scale(0.8);
+	}
+	
 }
 
 @media only screen and (max-width: 640px) and (min-width: 320px) {
@@ -766,7 +771,11 @@ img {
 	#msg {
 		display: none;
 	}
-	
+	#pin-code-container {
+		width: 100vw;
+		transform: scale(0.8);
+	}
+
 }
 @media only screen and (max-width: 900px) {
 	#right-side-footer {
