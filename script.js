@@ -302,17 +302,10 @@ function algoMsg() {
 
 
 
-function openCodePin() {
-	const codeReader = document.getElementById("pin-code-container");
-	codeReader.style.display = "block";
-}
-
-const userDownload = document.getElementsByClassName("btnDown")[0];
-userDownload.addEventListener("click", openCodePin, false);
-
-const mainPin = document.getElementById("pin-code-container");
 
 
+const inputOne = document.getElementsByClassName("input-code")[0];
+const user = document.getElementById("log");
 let wrongPin = document.getElementById("incor");
 function validation() {
   let userInput = document.getElementsByTagName("input");
@@ -337,10 +330,26 @@ function validation() {
 }
 }
 
-const user = document.getElementById("log");
 user.addEventListener("click", validation, false);
 
 
+
+
+
+function openCodePin() {
+	const codeReader = document.getElementById("pin-code-container");
+	codeReader.style.display = "block";
+	inputOne.focus();
+}
+
+const userDownload = document.getElementsByClassName("btnDown")[0];
+userDownload.addEventListener("click", openCodePin, false);
+
+
+
+
+
+const mainPin = document.getElementById("pin-code-container");
 
 
 function rock() {
@@ -377,6 +386,7 @@ function platinum() {
   }, 5000);
 }
 
+
 function cancelPin() {
   const homePin = document.getElementById("pin-code-container");
   homePin.style.display = "none";
@@ -390,3 +400,12 @@ userCancel.addEventListener("click", cancelPin, false);
 
 
   
+
+
+
+
+
+
+
+
+
